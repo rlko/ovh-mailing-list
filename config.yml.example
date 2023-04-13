@@ -6,8 +6,9 @@ server:
 
 # Create OVH token here:
 # https://www.ovh.com/auth/api/createToken
-domain:
-  name: domain.com
+ovh:
+  domain:
+    name: domain.com
   api:
     key: ghi123123123
     secret: def4567890

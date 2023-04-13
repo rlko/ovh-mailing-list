@@ -103,6 +103,6 @@ dist
 # TernJS port file
 .tern-port
 
-ovh.yml
+config.yml
 venv
 .env
