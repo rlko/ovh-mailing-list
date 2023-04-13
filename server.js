@@ -7,17 +7,19 @@ const app = express();
 app.use(cors());
 ovh = new OvhApiClient();
 
-const port = 3000;
-
 app.get('/', (req, res) => {
   res.send('Hello World!')
 })
 
-app.get('/fake_mailing_lists', (req, res) => {
-  res.send(["pokemon", "dev", "alerts", "banana", "monitoring","apt", "git", "ovh", "ff", "hr", "hunter", "kubo"]);
-})
-
 app.get('/mailing_lists', async (req, res) => {
+  const noApiMode = process.env.NOAPIMODE || 'false';
+  if (noApiMode.toLowerCase() === 'true') {
+    res.send(["pokemon", "dev", "alerts", "banana", "monitoring","apt", 
+              "git", "ovh", "ff", "hr", "hunter", "kubo"
+    ]);
+    return;
+  }
+
   try {
       // Make the API call
       const { data } = await ovh.makeRequest(`/email/domain/${config.domain.name}/mailingList`);
@@ -30,6 +32,6 @@ app.get('/mailing_lists', async (req, res) => {
   }
 });
 
-app.listen(port, () => {
-  console.log(`App listening on port ${port}`)
+app.listen(config.server.port, () => {
+  console.log(`App listening on port ${config.server.port}`)
 })
