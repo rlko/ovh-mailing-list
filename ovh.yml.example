@@ -1,0 +1,14 @@
+# Config file for ovh-mailing-list
+
+server:
+  port: 8000
+
+
+# Create OVH token here:
+# https://www.ovh.com/auth/api/createToken
+domain:
+  name: domain.com
+  api:
+    key: ghi123123123
+    secret: def4567890
+    ck: abc1234567890
