@@ -13,6 +13,10 @@ app.get('/', (req, res) => {
   res.send('Hello World!')
 })
 
+app.get('/fake_mailing_lists', (req, res) => {
+  res.send(["pokemon", "dev", "alerts", "banana", "monitoring","apt", "git", "ovh", "ff", "hr", "hunter", "kubo"]);
+})
+
 app.get('/mailing_lists', async (req, res) => {
   try {
       // Make the API call
