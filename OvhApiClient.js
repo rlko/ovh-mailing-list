@@ -4,10 +4,10 @@ const axios = require('axios').default;
 
 class OvhApiClient {
   constructor() {
-    this.baseApiUrl = "https://eu.api.ovh.com/1.0"
+    this.baseApiUrl = config.ovh.api.baseUrl;
     this.apiKey = config.ovh.api.key;
     this.apiSecret = config.ovh.api.secret;
-    this.apiCustomerKey = config.ovh.api.ck;
+    this.apiCustomerKey = config.ovh.api.customerKey;
   };
 
   signRequest = (httpMethod, url, body, timestamp) => {

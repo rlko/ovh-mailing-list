@@ -10,6 +10,7 @@ ovh:
   domain:
     name: domain.com
   api:
+    baseUrl: https://eu.api.ovh.com/1.0
     key: ghi123123123
     secret: def4567890
-    ck: abc1234567890
+    customerKey: abc1234567890

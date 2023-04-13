@@ -22,7 +22,7 @@ app.get('/mailing_lists', async (req, res) => {
 
   try {
       // Make the API call
-      const { data } = await ovh.makeRequest(`/email/domain/${config.domain.name}/mailingList`);
+      const { data } = await ovh.makeRequest(`/email/domain/${config.ovh.domain.name}/mailingList`);
       // Send the response
       res.send(data);
   } catch (error) {
