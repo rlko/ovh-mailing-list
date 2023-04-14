@@ -4,7 +4,7 @@ export default function MainContent() {
   const [msg, setMessage] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8000/mailing_lists")
+    fetch("/mailing_lists")
       .then((res) => res.json())
       .then((data) => setMessage(data));
   }, []);
