@@ -4,6 +4,9 @@ const config = require('./config');
 const OvhApiClient = require('./OvhApiClient');
 const {logger} = require("./back/logger/customLogger.js");
 
+const dotenv = require('dotenv');
+dotenv.config();
+
 const app = express();
 app.use(cors());
 app.use(express.static('client/build'));
