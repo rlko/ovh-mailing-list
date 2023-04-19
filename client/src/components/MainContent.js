@@ -1,15 +1,15 @@
 import { useState, useEffect } from "react";
 
 export default function MainContent() {
-  const [msg, setMessage] = useState("");
+  const [msg, setMessage] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8000/mailing_lists")
+    fetch("/mailing_lists")
       .then((res) => res.json())
       .then((data) => setMessage(data));
   }, []);
 
-//  const msg = ["achats", "dev", "alerts", "internal", "monitoring","apt", "github"];
+//const msg = ["achats", "dev", "alerts", "internal", "monitoring","apt", "github"];
   console.log(msg);
   msg.sort();
 

@@ -11,7 +11,7 @@ Install
 * git clone
 ```bash
 cd ovh-mailing-list
-npm install
+npm run install-build 
 ```
 
 A yaml config file named `config.yml` must be provided like this:
@@ -35,3 +35,5 @@ Check the [config.yml.example](https://github.com/rlko/ovh-mailing-list/blob/mai
 Token can be created [here](https://www.ovh.com/auth/api/createToken) to fill the config file above.
 
 You'll need to grant GET access to /email/domain/*
+
+For testing purposes, you can export the variable `NOAPIMODE=true` if you wish to simply use dummy values.
