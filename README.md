@@ -36,4 +36,4 @@ Token can be created [here](https://www.ovh.com/auth/api/createToken) to fill th
 
 You'll need to grant GET access to /email/domain/*
 
-For testing purposes, you can add a .env file with `NOAPIMODE=true` if you wish to simply use dummy values.
+For testing purposes, you can export the variable `NOAPIMODE=true` if you wish to simply use dummy values.
